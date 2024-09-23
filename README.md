@@ -1,13 +1,12 @@
 # Student Exam Performance Indicator
 
-This project predicts student exam performance based on various demographic and educational factors using a machine learning model. It is built using **Flask** for the web interface, **Streamlit** for an alternative UI, and **TensorFlow** for training the prediction model.
+This project predicts student exam performance based on various demographic and educational factors using a machine learning model. It is built using **Flask** for the web interface and **AWS BeanStalk** for deployment.
 
 ## Table of Contents
 - [Overview](#overview)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Model Training](#model-training)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
@@ -20,11 +19,32 @@ The **Student Exam Performance Indicator** aims to predict students' mathematics
 - **Input**: Demographic and educational details (Gender, Race/Ethnicity, Parental Education, etc.)
 - **Output**: Predicted Math Score
 - **Model**: Pre-trained Neural Network model saved as `model.h5`
-- **Web Interface**: Two UI options - Flask-based interface and a more interactive Streamlit UI.
+- **Web Interface**: Two UI options - Flask-based interface and a more interactive AWS BeanStalk deployement UI.
 
 ## Project Structure
 
-├── app.py # Flask application entry point ├── model.py # Model training and prediction logic ├── templates/ │ └── index.html # HTML for Flask web interface ├── static/ │ └── style.css # Custom styles for the web interface ├── model.h5 # Pre-trained machine learning model ├── requirements.txt # Python dependencies └── README.md # Project documentation
+MLProject/
+├── data/
+│   ├── raw/              # Original, immutable data dumps.
+│   ├── processed/        # Processed data ready for analysis.
+│   └── external/         # External data sources.
+│
+├── notebooks/            # Jupyter notebooks for exploration and analysis.
+│
+├── src/                 # Source code for the project.
+│   ├── __init__.py      # Makes src a Python module.
+│   ├── components/      # Scripts for data ingestion, data transformation and model training.
+│   ├── pipeline/        # Scripts for predict and train pipeline.
+│   ├── exception.py     # Script to raise custom exceptiom.
+│   ├── logger.py        # Script for logging information.
+|   └── logger.py 
+│
+├── artifacts/           # Contains train, test csv and .pkl files for preprocessing and scaling.
+│
+├── requirements.txt      # Python package dependencies.
+├── README.md             # This file.
+└── .gitignore            # Ignored files and directories.
+
 
 
 ## Installation
@@ -36,15 +56,50 @@ The **Student Exam Performance Indicator** aims to predict students' mathematics
 ### Setup:
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/modiparth527/student_exam_performance.git
+   git clone https://github.com/modiparth527/mlproject
    cd student_exam_performance
 
 2. **Create and activate a virtual environment (optional but recommended):**
+    ```bash
     conda create -p venv python==3.8
     conda activate venv
 
 3. **Install Dependencies**
+    ```bash
     pip install -r requirements.txt
 
-4. **Ensure the pre-trained model `model.h5` is present in the root directory. If not, follow the Model Training section to train and generate the model**
+4. **Ensure the pre-trained model `model.h5` is present in the root directory. If not, follow `data_ingestion.py` script fot training the model in `src/compoenents` folder.**
+
+## Usage
+
+### Running the Application
+1. **Run the Flask app:**
+   ```bash
+   python app.py
+
+2. **Access the web interface: Open your web browser and go to:**
+   ```bash
+   http://localhost:5000
+   
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. **Fork the repository** to your own GitHub account.
+2. **Create a new branch** for your feature or fix:
+   ```bash
+   git checkout -b feature/AmazingFeature
+
+3. **Make your changes and commit them:**
+   ```bash
+   git commit -m 'Add some AmazingFeature'
+4. **Push to the branch**
+   ```bash
+   git push origin feature/AmazingFeature
+5. **Open a pull request on the original repository**
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
 
