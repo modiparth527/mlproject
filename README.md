@@ -22,7 +22,7 @@ The **Student Exam Performance Indicator** aims to predict students' mathematics
 - **Web Interface**: Two UI options - Flask-based interface and a more interactive AWS BeanStalk deployement UI.
 
 ## Project Structure
-```bash
+```
 MLProject/
 ├── data/
 │   ├── raw/               # Original, immutable data dumps.
@@ -39,11 +39,7 @@ MLProject/
 ├── requirements.txt       # Python package dependencies.
 ├── README.md              # Project documentation (this file).
 └── .gitignore             # Ignored files and directories.
-
-
-
-
-
+```
 ## Installation
 
 ### Prerequisites:
