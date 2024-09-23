@@ -25,18 +25,21 @@ The **Student Exam Performance Indicator** aims to predict students' mathematics
 
 MLProject/
 ├── data/
-│   ├── csv file              # Original, immutable data dumps.
+│   ├── raw/              # Original, immutable data dumps.
+│   ├── processed/        # Processed data ready for analysis.
+│   └── external/         # External data sources.
 ├── notebooks/            # Jupyter notebooks for exploration and analysis.
 ├── src/                  # Source code for the project.
 │   ├── __init__.py       # Makes src a Python module.
 │   ├── components/       # Scripts for data ingestion, transformation, and model training.
 │   ├── pipeline/         # Scripts for predict and train pipeline.
 │   ├── exception.py      # Script to raise custom exceptions.
-│   ├── logger.py         # Script for logging information.
+│   └── logger.py         # Script for logging information.
 ├── artifacts/            # Contains train, test CSV files and .pkl files for preprocessing and scaling.
 ├── requirements.txt      # Python package dependencies.
 ├── README.md             # Project documentation (this file).
 └── .gitignore            # Ignored files and directories.
+
 
 
 
