@@ -1,6 +1,6 @@
-# Student Exam Performance Indicator
+# Student Exam Performance Indicator End To End Project
 
-This project predicts student exam performance based on various demographic and educational factors using a machine learning model. It is built using **Flask** for the web interface and **AWS BeanStalk** for deployment.
+The main **aim** of the project is to demonsrate **modular coding with necessary logging info and exception handling**, along with **AWS deployment**. This project predicts student exam performance based on various demographic and educational factors using a machine learning model. It is built using **Flask** for the web interface and **AWS BeanStalk** for deployment.
 
 ## Table of Contents
 - [Deployment](#deployment)
@@ -11,7 +11,8 @@ This project predicts student exam performance based on various demographic and 
 - [Contributing](#contributing)
 - [License](#license)
 
-## AWS BeanStalk Deployment
+## AWS BeanStalk Deployment [AWS Deployment Link ](http://studentperformance-env.eba-akmabera.eu-north-1.elasticbeanstalk.com/predictdata) (If the link does not work try removing `s` from https url)
+
 ![Logo](aws_deployment_studentperformance.jpg)
 
 
