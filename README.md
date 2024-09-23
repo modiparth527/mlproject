@@ -3,13 +3,17 @@
 This project predicts student exam performance based on various demographic and educational factors using a machine learning model. It is built using **Flask** for the web interface and **AWS BeanStalk** for deployment.
 
 ## Table of Contents
+- [Deployment](#deployment)
 - [Overview](#overview)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
+
+## AWS BeanStalk Deployment
+![Logo](aws_deployment_studentperformance.jpg)
+
 
 ## Overview
 
@@ -25,8 +29,6 @@ The **Student Exam Performance Indicator** aims to predict students' mathematics
 ```
 MLProject/
 ├── data/
-│   ├── raw/               # Original, immutable data dumps.
-│   ├── processed/         # Processed data ready for analysis.
 │   └── external/          # External data sources.
 ├── notebooks/             # Jupyter notebooks for exploration and analysis.
 ├── src/                   # Source code for the project.
